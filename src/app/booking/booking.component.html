@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="user-input">
+        <input class="input-element" type="number" [(ngModel)]="userInput">
+        <button class="btn" (click)="onSubmit()">Book</button>
+    </div>
+    <div class="main-row">
+        <div class="row" [ngStyle]="{backgroundColor: seat.isOccupied? 'aquamarine': 'mistyrose'}" *ngFor="let seat of coach">
+            <div class="seat">
+                <span>{{seat.seatNumber}}</span>
+            </div>
+        </div>
+    </div>
+</div>
